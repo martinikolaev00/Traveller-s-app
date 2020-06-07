@@ -1,6 +1,10 @@
 #include "input.hpp"
 #include<iostream>
 
+int isdigit(int c)
+{
+	return c >= '0' && c <= '9';
+}
 void input::start()
 {
 	cout << "\t\t Welcome to our Traveller's app" << endl;
@@ -29,7 +33,9 @@ void input::menu()
 		"5)get_rating" << endl <<
 		"6)get_comment" << endl <<
 		"7)add_friend" << endl <<
-		"8)exit" << endl;
+		"8)save" << endl <<
+		"9)load" << endl <<
+		"10)exit" << endl;
 	getcommand();
 
 }
@@ -181,12 +187,16 @@ void input::goontrip()
 	int cnt = 0;
 	for (int i = 0; i < 10; ++i)
 	{
+		
 		c = begin[i];
 		if (isdigit(c))
 		{
+
 			begin1 += ((int)(begin[i]) - 48) * pow(10, 7 - cnt);
 			cnt++;
 		}
+		
+		
 		
 	}
 	cout << "enter ending day of the trip(day/month/year) :";
@@ -203,7 +213,8 @@ void input::goontrip()
 
 	}
 	cout << "enter your grade for the trip (from 1 to 5):  ";
-	int grade; cin >> grade;
+	int grade;
+	cin >> grade;
 	char comment[400];
 	cout << "enter your comment for the trip:";
 	cin.ignore();
@@ -226,8 +237,19 @@ void input::goontrip()
 
 			uwu.addtrip(currentuser, buff);
 			uwu.adddest(dest);
+			for (int i = 0; i < numpics; ++i)
+				delete[] pictures[i];
+			delete[] pictures;
 		}
 	}
+	else
+	{
+		for (int i = 0; i < numpics; ++i)
+			delete[] pictures[i];
+		delete[] pictures;
+	}
+
+	
 }
 
 void input::getrating()
@@ -258,7 +280,11 @@ void input::getrating()
 	cin.getline(dest, 200);
 	p=uwu.checkdest(dest);
 	if (p == -1)
-		return;
+	{
+	cout << "This destination doesnt exist in the database" << endl;
+	return;
+	}
+		
 	cout<<"the overall rating for this location is: "<<uwu.getrating(dest)<<endl;
 	
 }
@@ -297,12 +323,12 @@ void input::addfriend()
 	cin >> user;
 	int p = -1;
 	p=uwu.getuser(user);
-	if (p != -1)
+	if (p != -1 && p!=currentuser)
 	{
 		uwu[currentuser].addfriend(uwu[p]);
 		cout << "friend added " << endl;
 	}
-	else cout << "this user doesnt exist " << endl;
+	else cout << "this user doesnt exist or is logged in " << endl;
 
 }
 
@@ -382,3 +408,4 @@ void input::getcomment()
 	}
 	
 }
+

@@ -8,8 +8,11 @@ using std::endl;
 Trip::Trip():begin(0),end(0),picturescount(0),rating(0)
 {
 	destination = new char[standart +1];
+	strcpy(destination, "");
 	destination[standart] = '\0';
+	
 	comment = new char[2*standart+1];
+	strcpy(comment, "");
 	comment[2*standart] = '\0';
 	pictures = new char* [maxpictures];
 	

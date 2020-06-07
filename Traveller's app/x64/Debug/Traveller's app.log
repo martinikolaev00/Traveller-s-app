@@ -1,4 +1,22 @@
 ﻿  Core.cpp
-D:\OOP\Traveller's app\Traveller's app\Core.cpp(301,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\OOP\Traveller's app\Traveller's app\Core.cpp(217): warning C4715: 'Core::getuser': not all control paths return a value
+D:\OOP\Traveller's app\Traveller's app\Core.cpp(304,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  input.cpp
+D:\OOP\Traveller's app\Traveller's app\input.cpp(5,1): warning C4273: 'isdigit': inconsistent dll linkage
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(35,56): message : see previous definition of 'isdigit'
+D:\OOP\Traveller's app\Traveller's app\input.cpp(195,55): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+D:\OOP\Traveller's app\Traveller's app\input.cpp(210,51): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Traveller's app.cpp
+  Trip.cpp
+D:\OOP\Traveller's app\Traveller's app\Trip.cpp(108,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OOP\Traveller's app\Traveller's app\Trip.cpp(113,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OOP\Traveller's app\Traveller's app\Trip.cpp(119,33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  user.cpp
+D:\OOP\Traveller's app\Traveller's app\user.cpp(84,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OOP\Traveller's app\Traveller's app\user.cpp(87,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OOP\Traveller's app\Traveller's app\user.cpp(90,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  user_personal.cpp
+  Generating Code...
+D:\OOP\Traveller's app\Traveller's app\user_personal.cpp(180): warning C4715: 'user_personal::getfriend': not all control paths return a value
+D:\OOP\Traveller's app\Traveller's app\Core.cpp(220): warning C4715: 'Core::getuser': not all control paths return a value
+     Creating library D:\OOP\Traveller's app\x64\Debug\Traveller's app.lib and object D:\OOP\Traveller's app\x64\Debug\Traveller's app.exp
   Traveller's app.vcxproj -> D:\OOP\Traveller's app\x64\Debug\Traveller's app.exe

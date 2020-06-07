@@ -169,10 +169,11 @@ double Core::getrating(char* dest)
 	int avg = 0;
 	int cnt = 0;
 	int size = Data.size();
+	char* c = nullptr;
 	if(p!=-1)
 		for (int i = 0; i <size; ++i)
 		{
-			char* c = getusername(dest, i);
+			 c = getusername(dest, i);
 			int tmp = getuser(c);
 			p = howmanytimesvisited(Data[tmp], dest);
 			if (p > 1)
@@ -195,6 +196,8 @@ double Core::getrating(char* dest)
 			
 		}
 	std::cout << "This destination has been visited " << cnt << " times" << std::endl;
+	if(c!=nullptr)
+		delete[] c;
 	return avg / cnt;
 
 

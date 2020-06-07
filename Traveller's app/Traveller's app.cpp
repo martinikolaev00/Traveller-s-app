@@ -1,11 +1,11 @@
 #include <iostream>
 #include<fstream>
 #include"input.hpp"
+
 int main()
 {
 	input commands;
 	commands.start();
-
 }
 
 
