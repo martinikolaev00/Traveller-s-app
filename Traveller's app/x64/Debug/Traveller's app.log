@@ -1,0 +1,4 @@
+﻿  Core.cpp
+D:\OOP\Traveller's app\Traveller's app\Core.cpp(301,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OOP\Traveller's app\Traveller's app\Core.cpp(217): warning C4715: 'Core::getuser': not all control paths return a value
+  Traveller's app.vcxproj -> D:\OOP\Traveller's app\x64\Debug\Traveller's app.exe
